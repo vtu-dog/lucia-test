@@ -68,7 +68,7 @@ export const Session =
 
 export const auth = lucia({
   adapter: adapter(mongoose),
-  secret: process.env.SECRET_KEY!,
+  secret: "somesecret",
   env: dev ? "DEV" : "PROD",
   transformUserData: (user) => {
     return {
